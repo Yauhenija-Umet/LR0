@@ -25,7 +25,3 @@ bmi3 = bmi_calculator(name3, h3, w3)
 print(bmi1)
 print(bmi2)
 print(bmi3)
-
-
-
-
