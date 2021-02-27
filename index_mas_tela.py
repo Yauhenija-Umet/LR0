@@ -1,27 +1,38 @@
 name1 = 'Марина'
-h1 = 1.70
-w1 = 61
+height1 = 1.70
+weight1 = 61
 
 name2 = 'Саня'
-h2 = 1.70
-w2 = 70
+height2 = 1.70
+weight2 = 70
 
 name3 = 'Лена'
-h3 = 1.70
-w3 = 75
+height3 = 1.70
+weight3 = 75
 
-def bmi_calculator(name, h,w):
-	bmi = w/(h**2)
-	print(name + ": Индекс массы тела = " + str(bmi))
-	if bmi<=25:
-		return name + " может скушать пончик"
-	else:
-		return name + " пора садиться на диету"
+def calculate_bmi(height, weight):
+    return weight / height**2
 
-bmi1 = bmi_calculator(name1, h1, w1)
-bmi2 = bmi_calculator(name2, h2, w2)
-bmi3 = bmi_calculator(name3, h3, w3)
+def show_person_bmi(name, height, weight):
+    bmi = calculate_bmi(height, weight)
+    print('%s: индекс массы тела = %.2f' % (name, bmi))
 
-print(bmi1)
-print(bmi2)
-print(bmi3)
+def get_advice_on_bmi(bmi):
+    if bmi <= 25:
+        return 'может скушать пончик'
+    else: 
+        return 'пора садиться на диету'
+
+def show_advice_on_bmi(name, height, weight):
+    bmi = calculate_bmi(height, weight)
+    advice = get_advice_on_bmi(bmi)
+    print(f"{name} {advice}")
+
+show_person_bmi(name1, height1, weight1)
+show_advice_on_bmi(name1, height1, weight1)
+
+show_person_bmi(name2, height2, weight2)
+show_advice_on_bmi(name2, height2, weight2)
+
+show_person_bmi(name3, height3, weight3)
+show_advice_on_bmi(name3, height3, weight3)
