@@ -34,5 +34,6 @@ show_advice_on_bmi(name1, height1, weight1)
 show_person_bmi(name2, height2, weight2)
 show_advice_on_bmi(name2, height2, weight2)
 
+
 show_person_bmi(name3, height3, weight3)
 show_advice_on_bmi(name3, height3, weight3)
